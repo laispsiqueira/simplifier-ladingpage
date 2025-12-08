@@ -19,7 +19,7 @@ export const ProductShowcase: React.FC = () => {
         <div className="relative rounded-3xl overflow-hidden shadow-2xl grid md:grid-cols-2 min-h-[600px]">
           
           {/* Visual Side (Emotional) */}
-          <div className="bg-casar-chocolate relative p-12 flex flex-col justify-between text-white order-2 md:order-1">
+          <div className="bg-casar-chocolate relative p-12 flex flex-col justify-between text-white">
             {/* Background Texture/Image Overlay */}
             <div className="absolute inset-0 bg-[url('https://picsum.photos/800/1200')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-casar-chocolate via-casar-chocolate/80 to-transparent"></div>
@@ -63,7 +63,7 @@ export const ProductShowcase: React.FC = () => {
           </div>
 
           {/* Functional Side (Operational/White) */}
-          <div className="bg-white p-12 flex flex-col justify-center order-1 md:order-2 border-y border-r border-slate-100 rounded-r-3xl">
+          <div className="bg-white p-12 flex flex-col justify-center border-y border-r border-slate-100">
             <div className="mb-8">
               <span className="text-brand-orange font-bold text-xs tracking-wider uppercase mb-2 block">
                 O Casamento
