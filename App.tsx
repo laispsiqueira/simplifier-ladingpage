@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSimplifier } from './components/HeroSimplifier';
 import { ProductShowcase } from './components/ProductShowcase';
 // import { ValueProposition } from './components/ValueProposition';
 import { Footer } from './components/Footer';
+import { CasarInteligenteApp } from './components/CasarInteligenteApp';
 
 const App: React.FC = () => {
+  const [currentView, setCurrentView] = useState<'landing' | 'app'>('landing');
+
+  const handleStartApp = () => {
+    setCurrentView('app');
+    window.scrollTo(0, 0);
+  };
+
+  const handleBackToHome = () => {
+    setCurrentView('landing');
+    window.scrollTo(0, 0);
+  };
+
+  if (currentView === 'app') {
+    return <CasarInteligenteApp onBack={handleBackToHome} />;
+  }
+
   return (
     <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-brand-orange selection:text-white">
       <Navbar />
@@ -14,7 +31,7 @@ const App: React.FC = () => {
         <HeroSimplifier />
         
         {/* Produto: Casar Inteligente */}
-        <ProductShowcase />
+        <ProductShowcase onStartApp={handleStartApp} />
         
         {/* Lógica: O elo entre as duas inteligências */}
         {/* <ValueProposition /> */}
