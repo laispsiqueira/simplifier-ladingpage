@@ -1,20 +1,23 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# Simplifier - Landing Page Institucional
 
-This contains everything you need to run your app locally.
+Página institucional estática que apresenta a marca **Simplifier** e o produto **Casar Inteligente**.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1ujwYcGECS_OGbt0sCe6SvqxPs1GAscZe
+## 🚀 Arquivos Funcionais (Core)
+- `index.html`: Configurações de branding, fontes (KyivType Sans) e Tailwind.
+- `index.tsx`: Inicialização da aplicação.
+- `App.tsx`: Layout principal e orquestração de seções.
+- `components/Navbar.tsx`: Navegação e identidade visual.
+- `components/HeroSimplifier.tsx`: Seção principal de introdução.
+- `components/ValueProposition.tsx`: DNA e metodologia Simplifier.
+- `components/ProductShowcase.tsx`: Apresentação do produto Casar Inteligente.
+- `components/Footer.tsx`: Rodapé e contatos.
+- `components/ErrorBoundary.tsx`: Componente de resiliência.
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🎨 Design System
+- **Tipografia Primária**: KyivType Sans (usada no logo e destaques).
+- **Tipografia de Apoio**: Inter (usada para leitura e corpo de texto).
+- **Paleta de Cores**: 
+  - Teal/Dark Teal: Base tecnológica.
+  - Chocolate: Acolhimento do produto Casar.
+  - Laranja: O "ponto de inteligência".

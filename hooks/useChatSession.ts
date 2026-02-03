@@ -1,4 +1,9 @@
-import { useState, useEffect, useCallback } from 'react';
+/**
+ * hooks/useChatSession.ts
+ * Hook especializado para gerenciar o ciclo de vida de uma sessão de chat com a Gemini API.
+ * Encapsula a lógica de conexão, histórico e estados de erro/carregamento.
+ */
+import { useState, useEffect } from 'react';
 import { GoogleGenAI, Chat } from "@google/genai";
 import { UseChatSessionOptions } from '../types/chat';
 
@@ -12,9 +17,7 @@ export const useChatSession = (options: UseChatSessionOptions) => {
 
     const initChat = async () => {
       try {
-        // NOTE: In this specific environment, we must use process.env.API_KEY.
-        // In a Vite environment, this should be import.meta.env.VITE_GEMINI_API_KEY
-        // We added a check to ensure it exists.
+        // Recupera a API Key do ambiente injetado
         const apiKey = process.env.API_KEY;
 
         if (!apiKey) {
@@ -22,8 +25,10 @@ export const useChatSession = (options: UseChatSessionOptions) => {
         }
 
         const ai = new GoogleGenAI({ apiKey });
+        
+        // Cria a sessão de chat com instruções de sistema e histórico inicial
         const chat = ai.chats.create({
-          model: options.model || 'gemini-2.5-flash',
+          model: options.model || 'gemini-3-flash-preview',
           config: {
             systemInstruction: options.systemInstruction,
             temperature: options.temperature || 0.7,

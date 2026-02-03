@@ -1,3 +1,8 @@
+/**
+ * index.tsx
+ * Ponto de entrada principal do React.
+ * Responsável por renderizar o componente <App /> no elemento DOM 'root'.
+ */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';

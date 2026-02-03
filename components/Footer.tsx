@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Instagram, Linkedin, Mail } from 'lucide-react';
+import { Instagram, Mail, MessageCircle } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -7,13 +8,13 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
-            {/* Logo Simplifier White Version */}
+            {/* Logo Simplifier White Version com KyivType Sans */}
             <div className="mb-6">
-              <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Simplifier Logo">
-                 <text x="0" y="24" fontFamily="Inter, sans-serif" fontWeight="500" fontSize="28" letterSpacing="-0.03em" fill="#FFFFFF">
+              <svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Simplifier Logo">
+                 <text x="0" y="24" fontFamily="KyivType Sans, sans-serif" fontWeight="500" fontSize="28" letterSpacing="-0.03em" fill="#FFFFFF">
                    simplifier
                  </text>
-                 <circle cx="128" cy="20" r="3.5" fill="#D58A1F" />
+                 <circle cx="145" cy="20" r="3.5" fill="#D58A1F" />
                </svg>
             </div>
             
@@ -26,8 +27,6 @@ export const Footer: React.FC = () => {
             <h4 className="text-brand-orange font-medium mb-6 text-sm uppercase tracking-wider">Produtos</h4>
             <ul className="space-y-4 text-sm text-slate-300">
               <li><a href="#" className="hover:text-white transition-colors">Casar Inteligente</a></li>
-              <li><a href="#" className="hover:text-white transition-colors opacity-50 cursor-not-allowed">Em breve: Morar Inteligente</a></li>
-              <li><a href="#" className="hover:text-white transition-colors opacity-50 cursor-not-allowed">Em breve: Investir Inteligente</a></li>
             </ul>
           </div>
 
@@ -36,21 +35,31 @@ export const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm text-slate-300">
               <li><a href="#" className="hover:text-white transition-colors">Sobre a Simplifier</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Manifesto</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Carreiras</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Imprensa</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-brand-orange font-medium mb-6 text-sm uppercase tracking-wider">Contato</h4>
             <div className="flex gap-4 mb-6">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange transition-colors">
+              <a 
+                href="https://www.instagram.com/simplifier.tech" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange transition-colors"
+                aria-label="Instagram @simplifier.tech"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange transition-colors">
-                <Linkedin size={20} />
+              <a 
+                href="https://wa.me/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange transition-colors"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle size={20} />
               </a>
-               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange transition-colors">
+               <a href="mailto:contato@simplifier.com.br" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange transition-colors" aria-label="E-mail">
                 <Mail size={20} />
               </a>
             </div>

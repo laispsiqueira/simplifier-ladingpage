@@ -1,7 +1,9 @@
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  // Fix: Making children optional helps resolve JSX type inference issues in some environments
+  children?: ReactNode;
   fallback?: ReactNode;
 }
 
@@ -10,21 +12,29 @@ interface State {
   error?: Error;
 }
 
+// Fix: Explicitly define properties to resolve TS issues where state/props aren't correctly inherited from generic Component
 class ErrorBoundary extends Component<Props, State> {
+  // Fix: Initialize state as class property to ensure it's recognized by the compiler
+  public override state: State = {
+    hasError: false
+  };
+
+  // Constructor is optional when state is initialized as a property, 
+  // but if kept, ensure it correctly handles the state assignment.
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  public override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
 
-  render() {
+  public override render(): ReactNode {
+    // Fix: access state and props via this
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4 font-sans">
@@ -46,6 +56,7 @@ class ErrorBoundary extends Component<Props, State> {
       );
     }
 
+    // Fix: return this.props.children
     return this.props.children;
   }
 }

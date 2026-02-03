@@ -1,11 +1,8 @@
+
 import React from 'react';
 import { Check, Heart, Brain } from 'lucide-react';
 
-interface ProductShowcaseProps {
-  onStartApp?: () => void;
-}
-
-export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onStartApp }) => {
+export const ProductShowcase: React.FC = () => {
   return (
     <section id="products" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -93,13 +90,6 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onStartApp }) 
                 </li>
               ))}
             </ul>
-
-            <button 
-              onClick={onStartApp}
-              className="bg-brand-orange text-white text-lg font-medium py-4 px-8 rounded-lg hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl w-full md:w-auto self-start text-center"
-            >
-              Conhecer o Casar Inteligente
-            </button>
             
             <p className="mt-4 text-xs text-slate-400">
               Parte do ecossistema Simplifier
