@@ -1,7 +1,8 @@
+
 /**
  * Navbar.tsx
  * Barra de navegação responsiva.
- * Inclui o logo da Simplifier em KyivType Sans e lógica de scroll para mudança de opacidade.
+ * Inclui o logo da Simplifier e lógica de scroll.
  */
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -10,7 +11,6 @@ export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Efeito para detectar o scroll do usuário e ajustar o estilo da navbar
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -26,13 +26,13 @@ export const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        {/* Logo Simplifier com a nova tipografia KyivType Sans */}
+        {/* Logo Simplifier com Outfit (Google Font) */}
         <div className="flex items-center gap-2">
            <svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Simplifier Logo">
-             <text x="0" y="24" fontFamily="KyivType Sans, sans-serif" fontWeight="500" fontSize="28" letterSpacing="-0.03em" fill="#1C7C92">
+             <text x="0" y="24" fontFamily="Outfit, sans-serif" fontWeight="500" fontSize="28" letterSpacing="-0.03em" fill="#1C7C92">
                simplifier
              </text>
-             <circle cx="145" cy="20" r="3.5" fill="#D58A1F" />
+             <circle cx="140" cy="20" r="3.5" fill="#D58A1F" />
            </svg>
         </div>
 

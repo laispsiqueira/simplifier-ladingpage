@@ -8,13 +8,13 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
-            {/* Logo Simplifier White Version com KyivType Sans */}
+            {/* Logo Simplifier White Version com Outfit */}
             <div className="mb-6">
               <svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Simplifier Logo">
-                 <text x="0" y="24" fontFamily="KyivType Sans, sans-serif" fontWeight="500" fontSize="28" letterSpacing="-0.03em" fill="#FFFFFF">
+                 <text x="0" y="24" fontFamily="Outfit, sans-serif" fontWeight="500" fontSize="28" letterSpacing="-0.03em" fill="#FFFFFF">
                    simplifier
                  </text>
-                 <circle cx="145" cy="20" r="3.5" fill="#D58A1F" />
+                 <circle cx="140" cy="20" r="3.5" fill="#D58A1F" />
                </svg>
             </div>
             
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-brand-orange font-medium mb-6 text-sm uppercase tracking-wider">Institucional</h4>
             <ul className="space-y-4 text-sm text-slate-300">
               <li><a href="#" className="hover:text-white transition-colors">Sobre a Simplifier</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Manifesto</a></li>
+              <li><a href="#manifesto" className="hover:text-white transition-colors">Manifesto</a></li>
             </ul>
           </div>
 

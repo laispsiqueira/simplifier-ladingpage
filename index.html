@@ -6,35 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simplifier | Tecnologia para Simplificar</title>
     
-    <!-- Favicon para evitar erro 404 -->
+    <!-- Favicon Inline para evitar erro 404 -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%231C7C92%22/></svg>">
 
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Fontes: Inter (Google) e Fallback para KyivType Sans -->
+    <!-- Google Fonts: Inter (Corpo) e Outfit (Destaques/Logo) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    
-    <!-- Tentativa de fonte KyivType Sans via CDN alternativo ou local-like fallback -->
-    <style>
-      /* Fallback manual se o CDN falhar */
-      @font-face {
-        font-family: 'KyivType Sans Fallback';
-        src: local('Arial');
-      }
-    </style>
-    <link href="https://fonts.cdnfonts.com/css/kyivtype-sans" rel="stylesheet" onerror="this.onerror=null;this.href='';console.warn('Falha ao carregar KyivType Sans. Usando fallbacks.');">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              // Adicionado fallbacks robustos caso a fonte KyivType falhe (500 error no console)
               sans: ['Inter', 'system-ui', 'sans-serif'],
-              kyiv: ['KyivType Sans', 'Playfair Display', 'serif'],
+              // 'kyiv' agora mapeia para 'Outfit' para manter compatibilidade com o CSS existente
+              kyiv: ['Outfit', 'sans-serif'],
             },
             colors: {
               simplifier: {
@@ -61,10 +51,7 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         scroll-behavior: smooth;
-      }
-      /* Prevenção de FOUT (Flash of Unstyled Content) */
-      .font-kyiv {
-        font-display: swap;
+        background-color: white;
       }
     </style>
   <script type="importmap">

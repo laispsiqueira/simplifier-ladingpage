@@ -16,23 +16,21 @@ export const ProductShowcase: React.FC = () => {
            </p>
         </div>
 
-        {/* Product Card - The main visual example from the brand book */}
+        {/* Product Card */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl grid md:grid-cols-2 min-h-[600px]">
           
           {/* Visual Side (Emotional) */}
           <div className="bg-casar-chocolate relative p-12 flex flex-col justify-between text-white">
-            {/* Background Texture/Image Overlay */}
-            <div className="absolute inset-0 bg-[url('https://picsum.photos/800/1200')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-casar-chocolate via-casar-chocolate/80 to-transparent"></div>
             
             <div className="relative z-10">
-              {/* Product Logo - Casar Inteligente */}
               <div className="mb-2">
                  <svg width="220" height="80" viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Casar Inteligente Logo">
-                   <text x="0" y="40" fontFamily="Inter, sans-serif" fontWeight="300" fontSize="48" letterSpacing="-0.02em" fill="#FFFFFF">
+                   <text x="0" y="40" fontFamily="Outfit, sans-serif" fontWeight="300" fontSize="48" letterSpacing="-0.02em" fill="#FFFFFF">
                      Casar
                    </text>
-                   <text x="0" y="75" fontFamily="Inter, sans-serif" fontWeight="400" fontSize="32" letterSpacing="-0.02em" fill="#FFFFFF">
+                   <text x="0" y="75" fontFamily="Outfit, sans-serif" fontWeight="400" fontSize="32" letterSpacing="-0.02em" fill="#FFFFFF">
                      Inteligente
                    </text>
                  </svg>
